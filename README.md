@@ -59,3 +59,11 @@ New-AzRoleAssignment `
    -ApplicationId $($applicationRegistration.AppId) `
    -RoleDefinitionName Contributor `
    -Scope $resourceGroup.ResourceId
+
+
+az group create --name SriramFunc --location australiasoutheast
+az deployment group create --resource-group SriramFunc --template-file main.bicep --parameters appInsightsLocation=australiasoutheast
+
+
+--cleanup 
+az group delete  --name SriramFunc
