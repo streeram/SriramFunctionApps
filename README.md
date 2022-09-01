@@ -37,10 +37,10 @@ create workflow.yml
 
 Before we can run Bicep scripts via GitHub actions, we must authorize GitHub. Create Azure AD identity and grant permissions to GitHub
 
-$githubOrganizationName = ‘streeram’
-$githubRepositoryName = ‘Sriram’FunctionApps’
+$githubOrganizationName = 'streeram'
+$githubRepositoryName = 'SriramFunctionApps'
 
-$applicationRegistration = New-AzADApplication -DisplayName ‘SriramFunc'
+$applicationRegistration = New-AzADApplication -DisplayName 'SriramFunc'
 
 New-AzADAppFederatedCredential `
    -Name 'SriramFunc' `
