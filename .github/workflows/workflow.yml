@@ -1,4 +1,4 @@
-name: deploy-toy-website
+name: deploy-sriram-function-app
 
 on: [workflow_dispatch]
 
