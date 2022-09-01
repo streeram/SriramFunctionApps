@@ -8,7 +8,7 @@ permissions:
 
 env:
     AZURE_RESOURCEGROUP_NAME: SriramFunc
-    ENVIRONMENT: Production
+    LOCATION: australiasoutheast
 
 jobs:
   deploy-job:
@@ -27,4 +27,4 @@ jobs:
         deploymentName: ${{ github.run_number }}
         resourceGroupName: ${{ env.AZURE_RESOURCEGROUP_NAME }}
         template: ./deploy/main.bicep
-        parameters: environmentType=${{ env.ENVIRONMENT }}
+        parameters: appInsightsLocation=${{ env.LOCATION }}
