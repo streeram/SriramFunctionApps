@@ -4,6 +4,7 @@ https://dev.to/kenakamu/debug-net-5-function-with-visual-studio-visual-studio-co
 https://github.com/Azure/azure-functions-dotnet-worker
 https://github.com/Azure/open-service-broker-azure/issues/540
 https://docs.microsoft.com/en-us/learn/modules/build-first-bicep-deployment-pipeline-using-github-actions/
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-github-actions?tabs=dotnet
 
 ```
 az group create --name exampleRG --location eastus
@@ -47,10 +48,7 @@ New-AzADAppFederatedCredential `
    -ApplicationObjectId $applicationRegistration.Id `
    -Issuer 'https://token.actions.githubusercontent.com' `
    -Audience 'api://AzureADTokenExchange' `
-   -Subject "repo:$($githubOrganizationName)/$($githubRepositoryName):ref:refs/heads/main"
-
-
-
+   -Subject "repo:$($githubOrganizationName)/$($githubRepositoryName):ref:refs/heads/master"
 
 $resourceGroup = New-AzResourceGroup -Name SriramFunc -Location australiasoutheast
 
