@@ -2,13 +2,12 @@ name: deploy-sriram-function-app
 
 on: [workflow_dispatch]
 
-env:
-    AZURE_RESOURCEGROUP_NAME: SriramFunc
-    AZURE_WEBAPP_NAME: SriramFunc
-
 permissions:
   id-token: write
   contents: read
+
+env:
+    AZURE_RESOURCEGROUP_NAME: SriramFunc
 
 jobs:
   deploy-job:
