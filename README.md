@@ -43,7 +43,7 @@ $githubRepositoryName = ‘Sriram’FunctionApps’
 $applicationRegistration = New-AzADApplication -DisplayName ‘SriramFunc'
 
 New-AzADAppFederatedCredential `
-   -Name 'SriramFunc-workflow' `
+   -Name 'SriramFunc' `
    -ApplicationObjectId $applicationRegistration.Id `
    -Issuer 'https://token.actions.githubusercontent.com' `
    -Audience 'api://AzureADTokenExchange' `
