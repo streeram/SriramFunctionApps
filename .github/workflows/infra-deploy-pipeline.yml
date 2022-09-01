@@ -1,4 +1,4 @@
-name: deploy-sriram-function-app
+name: deploy-sriram-function-app-infra
 
 on: [workflow_dispatch]
 
@@ -8,6 +8,7 @@ permissions:
 
 env:
     AZURE_RESOURCEGROUP_NAME: SriramFunc
+    ENVIRONMENT: Production
 
 jobs:
   deploy-job:
@@ -26,4 +27,4 @@ jobs:
         deploymentName: ${{ github.run_number }}
         resourceGroupName: ${{ env.AZURE_RESOURCEGROUP_NAME }}
         template: ./deploy/main.bicep
-        parameters: environmentType=Test
+        parameters: environmentType=${{ env.ENVIRONMENT }}
