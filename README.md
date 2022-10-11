@@ -66,6 +66,8 @@ az deployment group create --resource-group SriramFunc --template-file main.bice
 --cleanup 
 az group delete  --name SriramFunc
 
+Test
+
 Status Flags:
 
 [![Deploy DotNet project to function app with a Ubuntu environment](https://github.com/streeram/SriramFunctionApps/actions/workflows/build-and-deploy.yml/badge.svg?branch=master)](https://github.com/streeram/SriramFunctionApps/actions/workflows/build-and-deploy.yml)
